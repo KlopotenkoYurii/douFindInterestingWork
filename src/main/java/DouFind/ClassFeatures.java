@@ -39,6 +39,7 @@ public class ClassFeatures {
         driver.findElement(find(locator)).click();
     }
 
+
     protected By find(String locator) {
         if (locator.startsWith("//") || locator.startsWith("./")) {
             return By.xpath(locator);
