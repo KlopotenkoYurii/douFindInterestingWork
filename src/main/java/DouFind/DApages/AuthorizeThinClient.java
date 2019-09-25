@@ -33,4 +33,5 @@ public class AuthorizeThinClient extends ClassFeatures {
         click("//button[@id='ForTestLoginProceedButton']");
         return this;
     }
+
 }
