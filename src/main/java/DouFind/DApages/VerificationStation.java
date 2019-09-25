@@ -53,11 +53,12 @@ public class VerificationStation extends ClassFeatures {
     }
     public VerificationStation SaveBlocks(){
         Wait.waitFor(3);
-        click("//div[@id='RuleTable']/div[2]/div[4]");
+        click("//div[@id='BlockControl']/div/div[4]");
+        Wait.waitFor(5);
         return this;
     }
     public VerificationStation ClickSummit(){
-        Wait.waitFor(3);
+        Wait.waitFor(5);
         click("/div[@id='Submit']");
         return this;
     }
