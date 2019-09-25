@@ -35,7 +35,7 @@ public class TestRunner {
         public void AfterMethod() {
             System.out.println("start After Method");
     }
-        private void closeNotUsedTabs() {
+        public void closeNotUsedTabs() {
             String currentTab = driver.getWindowHandle();
             List<String> allTabs = new ArrayList<String>(driver.getWindowHandles());
 

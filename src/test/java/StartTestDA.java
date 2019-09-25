@@ -23,6 +23,11 @@ public class StartTestDA extends TestRunner {
                 .VendorID()
                 .Date()
                 .Number()
+                .AddRow()
+                .InventoryID()
+                .Quantity()
+                .UOM()
+                .Branch()
                 .RuleConfirm()
                 .SaveBlocks()
                 .ClickSummit();
