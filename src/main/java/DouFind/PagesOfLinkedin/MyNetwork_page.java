@@ -26,7 +26,7 @@ public class MyNetwork_page extends ClassFeatures {
         Wait.waitFor(4);
         for (int i=0; i<15; i++){
             if(i<15){
-                driver.findElement(By.xpath(ADD_CONTACT3)).click();
+
                 Wait.waitFor(1);
             }
             else break;
