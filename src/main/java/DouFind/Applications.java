@@ -1,7 +1,8 @@
 package DouFind;
 
-import DouFind.DApages.AuthorizeThinClient;
-import DouFind.DApages.VerificationStation;
+import DouFind.DocAlpha.Authorization.AuthorizeAcumatica;
+import DouFind.DocAlpha.Authorization.AuthorizeThinClient;
+import DouFind.DocAlpha.TestCases.VerificationStationTC1;
 import DouFind.PagesOfLinkedin.Authorization_page;
 
 import DouFind.PagesOfLinkedin.MyNetwork_page;
@@ -15,7 +16,8 @@ public class Applications {
     private MyNetwork_page myNetwork_page;
 
     private AuthorizeThinClient authorizeThinClient;
-    private VerificationStation verificationStation;
+    private VerificationStationTC1 verificationStationTC1;
+    private AuthorizeAcumatica authorizeAcumatica;
 
 
 
@@ -24,7 +26,8 @@ public class Applications {
         myNetwork_page = new MyNetwork_page(driver);
 
         authorization_page = new Authorization_page(driver);
-        verificationStation = new VerificationStation(driver);
+        verificationStationTC1 = new VerificationStationTC1(driver);
+        authorizeAcumatica = new AuthorizeAcumatica(driver);
     }
 
 
@@ -33,7 +36,8 @@ public class Applications {
     public MyNetwork_page getMyNetwork_page(){ return  myNetwork_page;}
 
     public AuthorizeThinClient getAuthorizeThinClient(){ return authorizeThinClient;}
-    public VerificationStation getVerificationStation(){ return verificationStation;}
+    public VerificationStationTC1 getVerificationStation(){ return verificationStationTC1;}
+    public AuthorizeAcumatica authorizeAcumatica(){return authorizeAcumatica;}
 
 
 }

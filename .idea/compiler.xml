@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="DouLinkedinDocAlpha" />
         <module name="dou2FindInterestingWork" />
-        <module name="douFindInterestingWork" />
       </profile>
     </annotationProcessing>
   </component>

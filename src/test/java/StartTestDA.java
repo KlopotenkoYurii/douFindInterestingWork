@@ -1,6 +1,8 @@
-import DouFind.DApages.AuthorizeThinClient;
-import DouFind.DApages.VerificationStation;
+import DouFind.DocAlpha.Authorization.AuthorizeAcumatica;
+import DouFind.DocAlpha.Authorization.AuthorizeThinClient;
+import DouFind.DocAlpha.TestCases.VerificationStationTC1;
 import org.testng.annotations.Test;
+
 
 public class StartTestDA extends TestRunner {
 
@@ -8,7 +10,7 @@ public class StartTestDA extends TestRunner {
     @Test
     public void dA() {
         AuthorizeThinClient authorizeThinClient = new AuthorizeThinClient(driver);
-        VerificationStation verificationStation = new VerificationStation(driver);
+        VerificationStationTC1 verificationStationTC1 = new VerificationStationTC1(driver);
 
         authorizeThinClient
                 .open_AuthorizeThinClientPage()
@@ -16,8 +18,7 @@ public class StartTestDA extends TestRunner {
                 .inputPASSWORD_AuthorizeThinClientPage()
                 .clickPROCEED_AuthorizeThinClientPage();
 
-
-        verificationStation
+        verificationStationTC1
                 .openVerificationStation()
                 .openBatch()
                 .VendorID()
@@ -31,6 +32,15 @@ public class StartTestDA extends TestRunner {
                 .RuleConfirm()
                 .SaveBlocks()
                 .ClickSummit();
+    }
+    @Test
+    public void Acumatica(){
+        AuthorizeAcumatica authorizeAcumatica = new AuthorizeAcumatica(driver);
 
+            authorizeAcumatica
+                .openAcumatica()
+                .authorizeLogin()
+                .authorizePassword()
+                .clickSignIn();
     }
 }

@@ -15,8 +15,7 @@ public class ClassFeatures {
         wait = new WebDriverWait(driver, 2);
     }
 
-    public ClassFeatures() {
-    }
+    public ClassFeatures() {}
 
     public ClassFeatures open(String url) {
         driver.get(url);
@@ -33,6 +32,11 @@ public class ClassFeatures {
     public void switchToLastTab() {
         List<String> list = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(list.get(list.size() - 1));
+    }
+
+    public void switchToNextTab() {
+        ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
     }
 
     public void click(String locator) {

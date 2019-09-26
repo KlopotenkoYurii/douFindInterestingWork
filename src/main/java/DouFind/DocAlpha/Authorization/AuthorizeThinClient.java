@@ -1,11 +1,9 @@
-package DouFind.DApages;
+package DouFind.DocAlpha.Authorization;
 
 import DouFind.ClassFeatures;
 import DouFind.Settings.Wait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import static DouFind.Url.Urls.LINKEDIN_PAGE;
 
 public class AuthorizeThinClient extends ClassFeatures {
 
@@ -17,7 +15,7 @@ public class AuthorizeThinClient extends ClassFeatures {
     public AuthorizeThinClient(WebDriver driver) {super(driver);}
 
     public AuthorizeThinClient open_AuthorizeThinClientPage(){
-        driver.get(DAAUTORIZE);
+        open(DAAUTORIZE);
         Wait.waitFor(1);
         return this;
     }

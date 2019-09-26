@@ -1,5 +1,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -19,12 +20,16 @@ public class TestRunner {
         String property = System.getProperty("user.dir") + "/ChromeDriver/chromedriver.exe";
         System.setProperty("webdriver.chrome.driver", property);
         WebDriverManager.chromedriver().setup();
+
+        System.setProperty("webdriver.gecko.driver","C:\\douFindInterestingWork\\Geckodriver\\geckodriver.exe");
+        WebDriverManager.firefoxdriver().setup();
     }
 
     @BeforeMethod
         public void BeforeMetod(){
         System.out.println("start Before Method");
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
+        // driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
 

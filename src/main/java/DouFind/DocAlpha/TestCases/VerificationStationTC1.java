@@ -1,4 +1,4 @@
-package DouFind.DApages;
+package DouFind.DocAlpha.TestCases;
 
 import DouFind.ClassFeatures;
 import DouFind.Settings.Wait;
@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 
-public class VerificationStation extends ClassFeatures {
-    public VerificationStation(WebDriver driver) {super(driver);}
+public class VerificationStationTC1 extends ClassFeatures {
+    public VerificationStationTC1(WebDriver driver) {super(driver);}
 
-    public VerificationStation openVerificationStation(){
+    public VerificationStationTC1 openVerificationStation(){
         Wait.waitFor(4);
         click("//div[3]/div[2]/div[3]");
         Wait.waitFor(5);
@@ -21,73 +21,73 @@ public class VerificationStation extends ClassFeatures {
     }
 
 
-    public VerificationStation openBatch(){
+    public VerificationStationTC1 openBatch(){
         Wait.waitFor(8);
         click("//tbody[@id='dataTable']/tr/td[2]");
         return this;
     }
 
     //...............Header fields of profile
-    public VerificationStation VendorID(){
+    public VerificationStationTC1 VendorID(){
         Wait.waitFor(8);
         WebElement vendID = driver.findElement(By.name("Vendor_ID"));
         vendID.sendKeys("AAVENDOR");
         return this;
     }
-    public VerificationStation Date(){
+    public VerificationStationTC1 Date(){
         WebElement date = driver.findElement(By.name("Date"));
         date.sendKeys("9/25/2019");
         return this;
     }
-    public VerificationStation Number(){
+    public VerificationStationTC1 Number(){
         WebElement number = driver.findElement(By.name("Number"));
         number.sendKeys("09112");
         return this;
     }
 
    // ................ add table
-    public VerificationStation AddRow(){
+    public VerificationStationTC1 AddRow(){
         Wait.waitFor(2);
         click("//td[9]/div");
         return this;
     }
 
     // ................ enter mandatory fields of the table
-    public VerificationStation InventoryID(){
+    public VerificationStationTC1 InventoryID(){
         Wait.waitFor(2);
         WebElement inventory = driver.findElement(By.xpath("//table[@id='DatatableContainer']/tbody/tr/td[1]/div/div/textarea"));
         inventory.sendKeys("AALEGO500");
         return this;
     }
-    public VerificationStation Quantity(){
+    public VerificationStationTC1 Quantity(){
         WebElement qti = driver.findElement(By.xpath("//td[3]/div/div/textarea"));
         qti.sendKeys("2");
         return this;
     }
-    public VerificationStation UOM(){
+    public VerificationStationTC1 UOM(){
         WebElement uom = driver.findElement(By.xpath("//td[4]/div/div/textarea"));
         uom.sendKeys("EA");
         return this;
     }
-    public VerificationStation Branch(){
+    public VerificationStationTC1 Branch(){
         WebElement branch = driver.findElement(By.xpath("//td[7]/div/div/textarea"));
         branch.sendKeys("PRODWHOLE");
         return this;
     }
 
     //................... validation, save blocks and send batch to export
-    public VerificationStation RuleConfirm(){
+    public VerificationStationTC1 RuleConfirm(){
         Wait.waitFor(3);
         WebElement ruleConfirm = driver.findElement(By.xpath("//div[@id='RuleTable']/div[2]/div[4]"));
         ruleConfirm.click();
         return this;
     }
-    public VerificationStation SaveBlocks(){
+    public VerificationStationTC1 SaveBlocks(){
         Wait.waitFor(3);
         click("//div[@id='BlockControl']/div/div[4]");
         return this;
     }
-    public VerificationStation ClickSummit(){
+    public VerificationStationTC1 ClickSummit(){
         Wait.waitFor(6);
         WebElement Submit = driver.findElement(By.id("Submit"));
         Submit.click();
