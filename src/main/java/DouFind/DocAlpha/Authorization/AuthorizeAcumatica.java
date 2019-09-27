@@ -1,6 +1,7 @@
 package DouFind.DocAlpha.Authorization;
 
 import DouFind.ClassFeatures;
+import DouFind.Settings.Wait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -25,6 +26,7 @@ public class AuthorizeAcumatica extends ClassFeatures {
     }
     public AuthorizeAcumatica clickSignIn(){
         click("//div[@id='login_user']/input[11]");
+        Wait.waitFor(3);
         return this;
     }
 }

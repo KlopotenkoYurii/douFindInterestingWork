@@ -2,6 +2,7 @@ package DouFind;
 
 import DouFind.DocAlpha.Authorization.AuthorizeAcumatica;
 import DouFind.DocAlpha.Authorization.AuthorizeThinClient;
+import DouFind.DocAlpha.TestCases.AcumaticaTC2;
 import DouFind.DocAlpha.TestCases.VerificationStationTC1;
 import DouFind.PagesOfLinkedin.Authorization_page;
 
@@ -18,6 +19,7 @@ public class Applications {
     private AuthorizeThinClient authorizeThinClient;
     private VerificationStationTC1 verificationStationTC1;
     private AuthorizeAcumatica authorizeAcumatica;
+    private AcumaticaTC2 acumaticaTC2;
 
 
 
@@ -28,6 +30,7 @@ public class Applications {
         authorization_page = new Authorization_page(driver);
         verificationStationTC1 = new VerificationStationTC1(driver);
         authorizeAcumatica = new AuthorizeAcumatica(driver);
+        acumaticaTC2 = new AcumaticaTC2(driver);
     }
 
 
@@ -38,6 +41,6 @@ public class Applications {
     public AuthorizeThinClient getAuthorizeThinClient(){ return authorizeThinClient;}
     public VerificationStationTC1 getVerificationStation(){ return verificationStationTC1;}
     public AuthorizeAcumatica authorizeAcumatica(){return authorizeAcumatica;}
-
+    public AcumaticaTC2 acumaticaTC2(){return acumaticaTC2;}
 
 }

@@ -14,7 +14,7 @@ public class VerificationStationTC1 extends ClassFeatures {
     public VerificationStationTC1 openVerificationStation(){
         Wait.waitFor(4);
         click("//div[3]/div[2]/div[3]");
-        Wait.waitFor(5);
+        Wait.waitFor(7);
         ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
         return this;
@@ -22,7 +22,7 @@ public class VerificationStationTC1 extends ClassFeatures {
 
 
     public VerificationStationTC1 openBatch(){
-        Wait.waitFor(8);
+        Wait.waitFor(10);
         click("//tbody[@id='dataTable']/tr/td[2]");
         return this;
     }
