@@ -1,6 +1,7 @@
 import DouFind.DocAlpha.Authorization.AuthorizeAcumatica;
 import DouFind.DocAlpha.Authorization.AuthorizeThinClient;
 import DouFind.DocAlpha.TestCases.AcumaticaTC2;
+import DouFind.DocAlpha.TestCases.LineItemValidationTC3;
 import DouFind.DocAlpha.TestCases.VerificationStationTC1;
 import org.testng.annotations.Test;
 
@@ -54,4 +55,17 @@ public class StartTestDA extends TestRunner {
                     .SysyOut();
 
     }
+    @Test
+    public void TestCase3(){
+        LineItemValidationTC3 lineItemValidationTC3 = new LineItemValidationTC3(driver);
+        VerificationStationTC1 verificationStationTC1 = new VerificationStationTC1(driver);
+                lineItemValidationTC3
+                        .openVerification()
+                        .enterLogin()
+                        .enterPassword()
+                        .enterLogIn();
+                verificationStationTC1
+                        .openBatch();
+    }
+
 }
