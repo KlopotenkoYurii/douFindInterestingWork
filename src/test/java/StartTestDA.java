@@ -53,7 +53,6 @@ public class StartTestDA extends TestRunner {
                     .getDataText()
                     .getVendorRef()
                     .SysyOut();
-
     }
     @Test
     public void TestCase3(){
@@ -66,6 +65,16 @@ public class StartTestDA extends TestRunner {
                         .enterLogIn();
                 verificationStationTC1
                         .openBatch();
+                lineItemValidationTC3
+                        .changeProfile()
+                        .addRow()
+                        .poNumber()
+                        .inventoryNumber()
+                        .vendorID()
+                        .clickSavesBlocks()
+                        .clickOnRequest()
+                        .vendorID()
+                        .clickSavesBlocks()
+                        .clickOnRequest();
     }
-
 }

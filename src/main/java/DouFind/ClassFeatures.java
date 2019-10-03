@@ -43,6 +43,10 @@ public class ClassFeatures {
         driver.findElement(find(locator)).click();
     }
 
+    public void input(String locator, String value) {
+        driver.findElement(find(locator)).sendKeys(value);
+    }
+
 
     protected By find(String locator) {
         if (locator.startsWith("//") || locator.startsWith("./")) {
