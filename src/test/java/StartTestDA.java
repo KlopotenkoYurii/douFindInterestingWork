@@ -3,6 +3,7 @@ import DouFind.DocAlpha.Authorization.AuthorizeThinClient;
 import DouFind.DocAlpha.TestCases.AcumaticaTC2;
 import DouFind.DocAlpha.TestCases.LineItemValidationTC3;
 import DouFind.DocAlpha.TestCases.VerificationStationTC1;
+import DouFind.TestActions.TestSomeActions;
 import org.testng.annotations.Test;
 
 
@@ -75,6 +76,17 @@ public class StartTestDA extends TestRunner {
                         .clickOnRequest()
                         .vendorID()
                         .clickSavesBlocks()
-                        .clickOnRequest();
+                        .clickOnRequest()
+                        .getText();
+    }
+    @Test
+    public void TestSomeActions(){
+        TestSomeActions testSomeActions = new TestSomeActions(driver);
+                testSomeActions
+                        .op()
+                        .op2()
+                        .op3()
+                        .op4()
+                        .op5();
     }
 }

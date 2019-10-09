@@ -8,6 +8,7 @@ import DouFind.DocAlpha.TestCases.VerificationStationTC1;
 import DouFind.PagesOfLinkedin.Authorization_page;
 
 import DouFind.PagesOfLinkedin.MyNetwork_page;
+import DouFind.TestActions.TestSomeActions;
 import org.openqa.selenium.WebDriver;
 
 public class Applications {
@@ -23,6 +24,8 @@ public class Applications {
     private AcumaticaTC2 acumaticaTC2;
     private LineItemValidationTC3 lineItemValidationTC3;
 
+    private TestSomeActions testSomeActions;
+
 
 
     public Applications(WebDriver driver) {this.driver = driver;
@@ -34,6 +37,8 @@ public class Applications {
         authorizeAcumatica = new AuthorizeAcumatica(driver);
         acumaticaTC2 = new AcumaticaTC2(driver);
         lineItemValidationTC3 = new LineItemValidationTC3(driver);
+
+        testSomeActions = new TestSomeActions(driver);
     }
 
 
@@ -46,5 +51,7 @@ public class Applications {
     public AuthorizeAcumatica authorizeAcumatica(){return authorizeAcumatica;}
     public AcumaticaTC2 acumaticaTC2(){return acumaticaTC2;}
     public LineItemValidationTC3 lineItemValidationTC3(){return lineItemValidationTC3;}
+
+    public TestSomeActions testSomeActions(){return  testSomeActions;}
 
 }

@@ -4,6 +4,7 @@ import DouFind.ClassFeatures;
 import DouFind.Settings.Wait;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class LineItemValidationTC3 extends ClassFeatures {
     public LineItemValidationTC3 (WebDriver driver) {super(driver);}
@@ -68,6 +69,13 @@ public class LineItemValidationTC3 extends ClassFeatures {
         Wait.waitFor(14);
         click("//div[2]/div[8]");
         return this;
+    }
+    public LineItemValidationTC3 getText(){
+        Wait.waitFor(7);
+       WebElement te1 = driver.findElement(By.xpath("//td[3]/div/div/textarea"));
+       te1.getAttribute("data-value");
+       System.out.println("text from Description block: " + te1);
+       return this;
     }
 
 

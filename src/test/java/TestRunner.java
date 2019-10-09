@@ -28,7 +28,7 @@ public class TestRunner {
     @BeforeMethod
         public void BeforeMetod(){
         System.out.println("start Before Method");
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         // driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
